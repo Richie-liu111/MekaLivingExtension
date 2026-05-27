@@ -1,0 +1,30 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# IDE 配置文件
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# 编译产物（核心！必须忽略）
+bin/
+build/
+out/
+*.class
+*.jar
+*.exe
+
+# Gradle 相关
+.gradle/
+gradlew
+gradlew.bat
+
+# 日志与临时文件
+*.log
+logs/
+crash-reports/
