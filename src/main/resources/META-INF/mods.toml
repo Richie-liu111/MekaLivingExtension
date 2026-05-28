@@ -1,11 +1,30 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
 modId="meka_living_extension"
-version="1.0.0"
+version="${mod_version}"
 displayName="MekaSuit Living Extension"
-description='''
-Allows MekaSuit damage absorption to work on non-player entities (like maids from TouhouLittleMaid).
-'''
-dependencies=[
-    { modId="forge", mandatory=true, versionRange="[47,)" },
-    { modId="minecraft", mandatory=true, versionRange="[1.20.1,1.21)" },
-    { modId="mekanism", mandatory=true, versionRange="[10.4,)" }
-]
+description='''Allows MekaSuit damage absorption to work on non-player entities (like maids from TouhouLittleMaid).'''
+
+[[dependencies.meka_living_extension]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.meka_living_extension]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.meka_living_extension]]
+modId="mekanism"
+mandatory=true
+versionRange="[10.4,)"
+ordering="AFTER"
+side="BOTH"

@@ -10,8 +10,11 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
+*.classpath
+*.project
+.settings/
 
-# 编译产物（核心！必须忽略）
+# 编译产物
 bin/
 build/
 out/
@@ -19,10 +22,14 @@ out/
 *.jar
 *.exe
 
-# Gradle 相关
+# Gradle 构建缓存（保留 wrapper 配置）
 .gradle/
-gradlew
-gradlew.bat
+
+# ForgeGradle 运行配置
+run/
+
+# 数据生成产物
+src/generated/
 
 # 日志与临时文件
 *.log

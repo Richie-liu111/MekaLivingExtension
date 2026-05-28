@@ -1,5 +1,6 @@
 package com.mekalivingextension.mekalivingextension.mixin;
 
+import com.mekalivingextension.mekalivingextension.MekaSuitDamageHelper;
 import mekanism.common.CommonPlayerTickHandler;
 import mekanism.common.item.gear.ItemMekaSuitArmor;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,8 +28,7 @@ public class CommonPlayerTickHandlerMixin {
         if (!isWearingMekaSuit(entity)) {
             return;
         }
-        if (ItemMekaSuitArmor.tryAbsorbAll(
-                (Player) (Object) entity, event.getSource(), event.getAmount())) {
+        if (MekaSuitDamageHelper.tryAbsorbAll(entity, event.getSource(), event.getAmount())) {
             event.setCanceled(true);
         }
         ci.cancel();
@@ -48,8 +48,8 @@ public class CommonPlayerTickHandlerMixin {
         if (!isWearingMekaSuit(entity)) {
             return;
         }
-        float ratioAbsorbed = ItemMekaSuitArmor.getDamageAbsorbed(
-                (Player) (Object) entity, event.getSource(), event.getAmount());
+        float ratioAbsorbed = MekaSuitDamageHelper.getDamageAbsorbed(
+                entity, event.getSource(), event.getAmount());
         if (ratioAbsorbed > 0) {
             float damageRemaining = event.getAmount() * Math.max(0, 1 - ratioAbsorbed);
             if (damageRemaining <= 0) {
