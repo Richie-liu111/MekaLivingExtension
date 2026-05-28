@@ -1,0 +1,15 @@
+{
+    "required": false,
+    "package": "com.mekalivingextension.mekalivingextension.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "minVersion": "0.8",
+    "client": [],
+    "server": [],
+    "mixins": [
+        "CommonPlayerTickHandlerMixin",
+        "ItemMekaSuitArmorMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
