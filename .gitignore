@@ -1,0 +1,41 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# IDE 配置文件
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+.settings/
+
+# 编译产物
+bin/
+build/
+out/
+*.class
+*.jar
+*.exe
+
+# Gradle 构建缓存（保留 wrapper 配置）
+.gradle/
+
+# ForgeGradle 运行配置
+run/
+
+# 数据生成产物
+src/generated/
+
+# 日志与临时文件
+*.log
+logs/
+crash-reports/
+
+1.20.1forge-1.21.1neoforge迁移.md
+Mekanism-1.21.1-10.7.19.85/
+
