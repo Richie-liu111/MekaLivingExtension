@@ -20,6 +20,8 @@ build/
 out/
 *.class
 *.jar
+# 例外：Gradle wrapper 的 jar 是构建入口，必须入库
+!gradle/wrapper/gradle-wrapper.jar
 *.exe
 
 # Gradle 构建缓存（保留 wrapper 配置）

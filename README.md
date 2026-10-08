@@ -19,7 +19,7 @@ Mekanism 模组中的 MekaSuit 是一套高级动力装甲，能够为穿戴的�
 
 ## 工作原理
 
-本模组通过两个 Mixin 类拦截 Mekanism 原有的伤害处理事件，并替换为对非玩家实体同样生效的逻辑：
+本模组通过两个 Mixin 类拦截 Mekanism 原有的伤害处理事件，并替换为对非玩家实体同样生效的逻辑。另有一个辅助类负责伤害计算：
 
 ### 1. CommonPlayerTickHandlerMixin
 
@@ -58,6 +58,16 @@ Mekanism 模组中的 MekaSuit 是一套高级动力装甲，能够为穿戴的�
 ```
 
 构建产物位于 `build/libs/` 目录下。
+
+> **必须用 JDK 17 启动 Gradle。** 本项目使用 Gradle 8.8，它无法在 Java 23 及以上的 JVM 上
+> 编译构建脚本（会报 `Unsupported class file major version`）。如果你的默认 `java` 版本更高，
+> 请显式指定 `JAVA_HOME`：
+>
+> ```bash
+> JAVA_HOME=$(/usr/libexec/java_home -v 17) ./gradlew build
+> ```
+>
+> 编译目标版本由 `build.gradle` 中的 Java toolchain 声明为 17，与启动 Gradle 的 JVM 无关。
 
 ## 许可证
 
